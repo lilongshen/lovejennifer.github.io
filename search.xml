@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title><![CDATA[半路出家如何学习Rails]]></title>
+      <url>http://yoursite.com/2016/07/19/%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0rails/</url>
+      <content type="html"><![CDATA[<p>此篇为”How I Trained to learn Rails————A Guide to Learning Rails in 2 months”的译文，原文请点击<a href="https://medium.com/how-i-learned-Ruby-Rails/how-i-trained-to-learn-Rails-e08c94e2a51e#.ob1e4cfty" target="_blank" rel="external">原文</a>.<br>其实我也不是一点编程基础都没有，我很久以前曾经学习过VB这种老掉牙的基础知识。除此之外，毫无经验。我花两个月艰难地学习了Rails，没有睡眠，没有聚会，只有冰冷的代码。我禁止自己看与编程无关的视频和电视节目，我做的所有事情只有一个目的，那就是赶紧成为一名经验丰富的开发者，越快越好。我之前也了解过HTML和CSS，但是基本也都忘光了。我不得不重新开始学习HTML5和CSS3，在你学习Rails之前，你必须掌握这些基础技能。<a id="more"></a></p>
+<p></p><h2>千万不要，在还没学习Ruby之前就直接学Rails</h2><br>当你开始学习一门语言的时候，总是会犯一些错误，并且在你成为成熟的开发者之后才会意识到。现在提前了解到这些错误，能帮助你节约大量的时间。<br>当我决定开始学习Ruby on Rails的时候，我读了很多博客，他们一些人都在说学习Rails不需要先学Ruby，可以顺便在Rails开发中学习。我现在完全不同意这一点，我当时意识到这个是因为看到了维基百科上关于Rails的定义，Rails是一个运行Ruby编程语言的开源应用框架。<a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" target="_blank" rel="external">wiki</a><br>这个简单的句子，解释了精通Ruby是掌握Rails的关键。你在Rails框架上使用Ruby编程的，唯一的区别就是Rails框架能让你开发应用更加有组织性，更加便利。<br>如果你在学习Rails之前好好学习了一番Ruby，那么Rails的学习就是小菜一碟。无论你创建什么按钮或者行为，本源都是Ruby语言。同时，掌握Ruby还能让你更深入地理解Rails，可以直接看源代码去理解Rails的一些类和方法。<p></p>
+<p></p><h2>为什么看了那么多教程还是不会？</h2><br>我在短时间内看了大量的书，读了很多教程，但并不是所有东西都是有帮助的。有些东西我学了之后非常的困惑，我列个清单给你们。<p></p>
+<ul>
+<li>博客经常让你困惑</li>
+</ul>
+<p>作为初学者，博客在教你学习Rails的时候经常让你困惑，一个最简单的原因就是，Ruby/Rails的不同实践取决于不同的版本。例如asset pipeline(资源管线)在Rails 3这个版本中出现，大多数博客都默认你已知这个东西。</p>
+<ul>
+<li>Ruby/Rails的版本问题</li>
+</ul>
+<p>Ruby是一个不断成长的语言，许多努力的天才仍然在不断提升它，Rails也一样。当语言和框架在提升的时候，一些细节也会随之改变。对于那些对于Ruby/Rails没有任何经验的初学者，寻找这些改动简直就是大海捞针。避免遇到这些困惑的最好办法就是在第一时间了解它们之间的区别是什么。阅读“发行笔记”，它包含了很多有用的信息，让你避免花大量时间去调试。<a href="http://edgeguides.RubyonRails.org/4_0_release_notes.HTML" target="_blank" rel="external">Here a link to the release note for Rails 4.</a></p>
+<ul>
+<li>在IRC上求助。(IRC全名为Internet Relay Chat，是一款即时聊天工具，没有国界限制，在国外黑客界非常流行)</li>
+</ul>
+<p>我已经用IRC14年了，直到我发现Rails之后，IRC一直都是我学习的方向。但是很多人在Ruby/Rails的频道中都非常没有耐心，非常粗鲁。我认为他们都忘记了作为新手的感觉。在IRC中聊天的人虽然都比较粗鲁，但是他们给了我很多非常棒的建议。例如学习Rails的时候，所有东西在书中都有；要自己寻找解答，要成为一个问题解决者；千万不要指望别人为你写代码，要自己搞清楚它们。很多问题都可以问google，IRC只适合你遇到非常晦涩的bug时来问咯。</p>
+<p></p><h2>什么是有用的？</h2><p></p>
+<ul>
+<li>大量读书而不是看博客</li>
+</ul>
+<p><a href="https://pine.fm/LearnToProgram/" target="_blank" rel="external">Learning Programing by Chris Pine ( Read Online )</a><br>这本书是目前为止介绍Ruby最好的书。当我读Chris Pine这本书的时候我已经在网上读了大量的教程。这本书让我意识到了这就是我一直寻找的学习Ruby on Rails的最佳入门教程。Chris Pine非常通俗地解释了Ruby的概念，并且让你读完后就拥有了Ruby开发者的思考模式。可以免费阅读。<br><a href="http://learnRubythehardway.org/book/" target="_blank" rel="external">Learning Ruby the Hard Way</a><br>人们有不同的方式学习，就我个人而言，我喜欢挑战。读这本书强迫我面对问题并且找到方式解决它。它同时也让我更好的理解了Ruby语言，并且练习了多次。我阅读了每一章节并且在两周内完成了所有练习，之后我发现我对Ruby有了更加深刻的理解。<br><a href="https://www.amazon.com/Rails-Way-Addison-Wesley-Professional-Ruby-ebook/dp/B004G606IK/156-1478681-3116853?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B004G606IK&amp;linkCode=as2&amp;redirect=true&amp;ref_=as_li_qf_sp_asin_tl&amp;tag=ricdxsmed-20" target="_blank" rel="external">The Rails Way by Obie Fernandez</a><br><a href="http://blog.obiefernandez.com/" target="_blank" rel="external">Obie Fernandez</a>写的所有东西都是最棒的。它是一个伟大的开发者同样也是一个非常会写学习书籍的作家。<br><a href="https://www.amazon.com/Ruby-Rails-Tutorial-Addison-Wesley-Professional/dp/0321832051?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321832051&amp;linkCode=as2&amp;redirect=true&amp;ref_=as_li_qf_sp_asin_il_tl&amp;tag=ricdxsmed-20" target="_blank" rel="external">The Ruby on Rails 3 Tutorial: Learning by example</a><br>在学习社区的大多数人都推荐从这本书开始学习，我反而不会推荐任何人从这本书开始学习。在你熟悉了Ruby语言之后，你再开始学习Rails教程。这本书还教了你很多基础技能，包括Git,CSS,HTML和Rails。</p>
+<ul>
+<li>互动性网站</li>
+</ul>
+<p><a href="https://rubymonk.com/" target="_blank" rel="external">Rubymonk</a><br>Rubymonk把我带入了元编程的世界，帮助我理解了大量的Ruby方法。这是一个非常好的网站，让你在学习Rails之前提高你对Ruby的理解。<br><a href="http://www.codeschool.com/" target="_blank" rel="external">Codeschool</a><br>如果你没有基础知识，直接看Codeschool可能有些困难，这就是为什么我总是推荐一些学习Ruby和Rails一段时间的人看这个网站。我爱这个网站的原因是因为它更接近学习如何实战。它们有非常好的指导。当你看不同的教学视频的时候，要注意你应该提前下载好相对应的PDF文档，并且用这些文档来完成作业。Codeschool不是免费的，但大多数第一课的第一章节是免费的。会员费大概在25美刀。<br><a href="https://coderwall.com/" target="_blank" rel="external">Coderwall</a><br>我开始学习Coderwall上的大量技巧并且阅读社区里的文章，例如我学到了ruby中使用pluk方法用作查询的小技巧。一些开发者有一些特殊方式做事情，充满好奇心和热情去提高你已经知道的事情是非常好的。到最后，好的代码来自于更好的重构。<br><a href="http://www.railscasts.com/" target="_blank" rel="external">Railscasts</a><br>我现在可以自豪地说我已经看了Railscasts中的任何一章。当我学习Rails的时候，我用不同的gems至少建立了35个不同的app。Railscasts是一个能让我更好地熟悉这些gems的地方，并且学习如何更快的使用它们。Railscasts也教会了我一些有用的小事情。经常阅读评论，人们会增添解释和问题，使你为了应对他们不得不经常回顾这些课程。</p>
+<ul>
+<li>博客</li>
+</ul>
+<p>如果你是新手，博客不太有帮助，但是你一旦入门了，博客开始变得极其有帮助。特别是当你需要解决bugs或者提升对Rails的认识的时候。你将会发现无数可能使你更好的技巧和提示。</p>
+<ul>
+<li>千万不要复制／粘贴代码</li>
+</ul>
+<p>即使在今天，你仍然需要一行一行地手敲代码。它将帮助你记忆代码并且不断练习。当你学习新事物的时候，你必须不断练习，加深记忆。一定要这么做，你将记忆深刻。</p>
+<ul>
+<li>永远不要懒于用google查找</li>
+</ul>
+<p>每一位开发者必须掌握的技能就是用google查找。当你发现一个bug的时候或者你在建造东西的时候遇到困难，google都应该是你一个想到的。永远不要懒于用google查找解答。你很可能在google中得到你要的解答。另外我经常混的一个网站叫<a href="http://stackoverflow.com/" target="_blank" rel="external">Stackoverflow</a>，但是我总是在google论坛和博客中找到解答。你总会有一些忘记的或者需要再次确认的事情，这时google就派上用场了。你越早用谷歌和Stackoverflow，你将越早发现你从未遇到而别人早已经历的问题和解答方案。</p>
+<ul>
+<li>阅读帮助文档和源代码</li>
+</ul>
+<p>如果你的问题在网上没有好到任何解答，回去好好阅读帮助文档和源代码吧，因为这很可能是你有一些知识点根本没有理解。这种情况发生时，你最好回去看看源代码，探究一下背后的原理。阅读Rails的源代码非常有用。它将让你学到整个系统是怎样运转的。<br><a href="http://guides.rubyonrails.org/" target="_blank" rel="external">The Ruby on Rails Guide</a>是经常被低估的，大多数人忽视它。老实说，我第一次读的时候也不太在意它。要明白永远不要忽视Rails Guide，把它整个读完。永远不要以为你完全掌握了Rails，常常回过头来看看Rails Guide。回来看指南并不意味着你是愚蠢的，恰恰相反这是最明智的选择来更好地理解学到的东西。在读的过程中努力寻找那些困惑你的概念，反复阅读它，理解它。</p>
+<p></p><h2>最后一点</h2><br>我之前每天早上赶去上班，在地铁上或是公车上经常阅读Ruby文档。随机阅读一些方法或者类。这个小练习能让你在回到电脑前编程时变得无比有效率。另外，如果你还不知道如何使用Terminal或者Prompt命令行，我建议你赶快熟悉它。你需要用它来安装<a href="http://www.ruby-lang.org/en/" target="_blank" rel="external">Ruby</a>，<a href="http://rubyonrails.org/" target="_blank" rel="external">Rails</a>，<a href="https://rvm.io/" target="_blank" rel="external">rvm</a>，<a href="http://brew.sh/" target="_blank" rel="external">homebrew</a>，包括如何配置环境变量也需要用到它。<p></p>
+<p></p><h2>相关阅读：</h2><p></p>
+<ol>
+<li><p><a href="https://medium.com/p/45e7e776eef8" target="_blank" rel="external">RichCSS : A clean object oriented CSS framework.</a></p>
+</li>
+<li><p><a href="https://medium.com/how-i-learned-ruby-rails/how-to-land-your-first-ruby-on-rails-job-e01cd32eee49#.mnuf0d19u" target="_blank" rel="external">How to land your first Ruby on Rails job.</a></p>
+</li>
+<li><p><a href="https://medium.com/how-i-learned-ruby-rails/why-googling-is-the-most-important-skill-a-developer-must-have-d69b89b22218#.ap640wj5z" target="_blank" rel="external">Why Googling is the most important skill a developer <em>must</em> have.</a></p>
+</li>
+</ol>
+<p>这篇原文文章已经有超过10万的阅读量了，希望更多人能看到它。<br><img src="http://7xw72d.com1.z0.glb.clouddn.com/ruby%20on%20rails1.png" alt="Ruby创始人的twitter截图"><br>原文作者 Richardson Dackam</p>
+<p>FOLLOW HIM ON SOCIAL MEDIA</p>
+<ul>
+<li><a href="facebook.com/richardsondackam">facebook.com/richardsondackam</a></li>
+<li><a href="twitter.com/richardsondx">twitter.com/richardsondx</a></li>
+</ul>
+<p>Richardson is a Senior Developer, Designer &amp; Maker +CEO of Rich DX Studio, a design &amp; web development studio located in Toronto that focuses on building products.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[去哪儿寻找NBA最新资讯]]></title>
       <url>http://yoursite.com/2016/07/11/%E6%9B%B4%E5%A5%BD%E5%9C%B0%E4%BA%AB%E5%8F%97NBA/</url>
       <content type="html"><![CDATA[<p><strong>休赛期到了，一年一度的自由球员交易大门打开了，年年各队走马换将，今年也不例外，出现了Kevin Durant去哪儿和Dwyane Wade去哪儿的大戏。然而今年的戏份更多，由于工资帽的大幅提高，球员的薪水也是水涨船高，大合同比比皆是，让球迷惊叹美元不值钱了。那么如何最快速地了解这些最新的咨询？国内的新闻媒体都是24小时盯着什么地方在找消息，请听我娓娓道来。</strong></p>
