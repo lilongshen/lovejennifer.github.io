@@ -105,20 +105,20 @@
 
 
 <meta name="description" content="在学习javascript的时候遇到了困难，卡了好多天一直无法解决。求助howard，对方希望我能将自己的代码传到github上再解决。我虽然早早注册过github，也用它绑定了hexo博客，但是依然不会如何上传，Google了方法，又试错了一个小时后，终于上传成功，在这里写下我查到的方法，以及我遇到的障碍和解决方法。
-第一步：建立git仓库在你要上传的本地目录下，执行git命令。">
+第一步：将github账号与ssh连接最最最开始是一定要现有git。首先去 h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何上传本地代码到github">
 <meta property="og:url" content="http://yoursite.com/2016/09/02/如何上传本地代码到github/index.html">
 <meta property="og:site_name" content="Longshen's blog">
 <meta property="og:description" content="在学习javascript的时候遇到了困难，卡了好多天一直无法解决。求助howard，对方希望我能将自己的代码传到github上再解决。我虽然早早注册过github，也用它绑定了hexo博客，但是依然不会如何上传，Google了方法，又试错了一个小时后，终于上传成功，在这里写下我查到的方法，以及我遇到的障碍和解决方法。
-第一步：建立git仓库在你要上传的本地目录下，执行git命令。">
+第一步：将github账号与ssh连接最最最开始是一定要现有git。首先去 h">
 <meta property="og:image" content="http://7xw72d.com1.z0.glb.clouddn.com/github1.png">
 <meta property="og:image" content="http://7xw72d.com1.z0.glb.clouddn.com/github2.png">
-<meta property="og:updated_time" content="2016-09-02T07:15:19.000Z">
+<meta property="og:updated_time" content="2016-09-04T05:47:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何上传本地代码到github">
 <meta name="twitter:description" content="在学习javascript的时候遇到了困难，卡了好多天一直无法解决。求助howard，对方希望我能将自己的代码传到github上再解决。我虽然早早注册过github，也用它绑定了hexo博客，但是依然不会如何上传，Google了方法，又试错了一个小时后，终于上传成功，在这里写下我查到的方法，以及我遇到的障碍和解决方法。
-第一步：建立git仓库在你要上传的本地目录下，执行git命令。">
+第一步：将github账号与ssh连接最最最开始是一定要现有git。首先去 h">
 <meta name="twitter:image" content="http://7xw72d.com1.z0.glb.clouddn.com/github1.png">
 
 
@@ -375,21 +375,24 @@
 
       
         <p>在学习javascript的时候遇到了困难，卡了好多天一直无法解决。求助howard，对方希望我能将自己的代码传到github上再解决。我虽然早早注册过github，也用它绑定了hexo博客，但是依然不会如何上传，Google了方法，又试错了一个小时后，终于上传成功，在这里写下我查到的方法，以及我遇到的障碍和解决方法。</p>
-<h2 id="第一步：建立git仓库"><a href="#第一步：建立git仓库" class="headerlink" title="第一步：建立git仓库"></a>第一步：建立git仓库</h2><p>在你要上传的本地目录下，执行git命令。<a id="more"></a></p>
+<h2 id="第一步：将github账号与ssh连接"><a href="#第一步：将github账号与ssh连接" class="headerlink" title="第一步：将github账号与ssh连接"></a>第一步：将github账号与ssh连接</h2><p>最最最开始是一定要现有git。<br><br>首先去 <a href="https://github.com" target="_blank" rel="external">https://github.com</a>  申请账号。<br><br>然后创建ssh：打开终端检测是否存在ssh：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~/.ssh</div></pre></td></tr></table></figure></p>
+<p>如果存在，先将已有的ssh备份，或者将新建的ssh生成到另外的目录下。如果不存在，通过默认的参数直接生成ssh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C xxxxx@gmail.com（注册github时的email）</div></pre></td></tr></table></figure></p>
+<p>之后在github中添加ssh：<br><a id="more"></a><br>登陆github，选择Account Settings–&gt;SSH  Keys 添加ssh<br><br>Title：xxxxx@gmail.com<br><br>Key：打开你生成的id_rsa.pub文件，将其中内容拷贝至此。<br><br>最后打开终端，先测试一下你的帐号跟github连上没有：ssh -T git@github.com 如果出现如下提示，表示你连已经连上了.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi lovejennifer! You\<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></div></pre></td></tr></table></figure></p>
+<h2 id="第二步：建立git仓库"><a href="#第二步：建立git仓库" class="headerlink" title="第二步：建立git仓库"></a>第二步：建立git仓库</h2><p>在你要上传的本地目录下，执行git命令。<!--more--></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> greet</div><div class="line">$ git init</div></pre></td></tr></table></figure>
-<h2 id="第二步：将项目的所有文件添加到仓库中"><a href="#第二步：将项目的所有文件添加到仓库中" class="headerlink" title="第二步：将项目的所有文件添加到仓库中"></a>第二步：将项目的所有文件添加到仓库中</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add .</div></pre></td></tr></table></figure>
+<h2 id="第三步：将项目的所有文件添加到仓库中"><a href="#第三步：将项目的所有文件添加到仓库中" class="headerlink" title="第三步：将项目的所有文件添加到仓库中"></a>第三步：将项目的所有文件添加到仓库中</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git add .</div></pre></td></tr></table></figure>
 <p>如果添加特定文件，把.换称文件名</p>
-<h2 id="第三步：将add的文件commit到仓库"><a href="#第三步：将add的文件commit到仓库" class="headerlink" title="第三步：将add的文件commit到仓库"></a>第三步：将add的文件commit到仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git commit -m <span class="string">"whatever"</span></div></pre></td></tr></table></figure>
+<h2 id="第四步：将add的文件commit到仓库"><a href="#第四步：将add的文件commit到仓库" class="headerlink" title="第四步：将add的文件commit到仓库"></a>第四步：将add的文件commit到仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git commit -m <span class="string">"whatever"</span></div></pre></td></tr></table></figure>
 <p>whatever可以改成任意词语，注释语句。</p>
-<h2 id="第四步：建立自己的Repository"><a href="#第四步：建立自己的Repository" class="headerlink" title="第四步：建立自己的Repository"></a>第四步：建立自己的Repository</h2><p><img src="http://7xw72d.com1.z0.glb.clouddn.com/github1.png" alt="github1"></p>
+<h2 id="第五步：建立自己的Repository"><a href="#第五步：建立自己的Repository" class="headerlink" title="第五步：建立自己的Repository"></a>第五步：建立自己的Repository</h2><p><img src="http://7xw72d.com1.z0.glb.clouddn.com/github1.png" alt="github1"></p>
 <p>点击上图的Create repository之后，就可以看到下图界面，当然你可能只有README.md这个文件。点击clone and download复制https地址。<br><img src="http://7xw72d.com1.z0.glb.clouddn.com/github2.png" alt="github2"></p>
-<h2 id="第五步：将本地的仓库关联到github上"><a href="#第五步：将本地的仓库关联到github上" class="headerlink" title="第五步：将本地的仓库关联到github上"></a>第五步：将本地的仓库关联到github上</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add origin https://github.com/lovejennifer/learnmagicjavascript.git</div></pre></td></tr></table></figure>
+<h2 id="第六步：将本地的仓库关联到github上"><a href="#第六步：将本地的仓库关联到github上" class="headerlink" title="第六步：将本地的仓库关联到github上"></a>第六步：将本地的仓库关联到github上</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add origin https://github.com/lovejennifer/learnmagicjavascript.git</div></pre></td></tr></table></figure>
 <p>后面的https链接地址换成你自己的仓库url地址。<br>这时可能会出现如下错误：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fatal: remote origin already exists</div></pre></td></tr></table></figure>
 <p>执行以下语句即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote rm origin</div></pre></td></tr></table></figure>
 <p>然后再次执行git remote…</p>
-<h2 id="第六步：上传github之前，要先pull。"><a href="#第六步：上传github之前，要先pull。" class="headerlink" title="第六步：上传github之前，要先pull。"></a>第六步：上传github之前，要先pull。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git pull origin master</div></pre></td></tr></table></figure>
+<h2 id="第七步：上传github之前，要先pull。"><a href="#第七步：上传github之前，要先pull。" class="headerlink" title="第七步：上传github之前，要先pull。"></a>第七步：上传github之前，要先pull。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git pull origin master</div></pre></td></tr></table></figure>
 <ul>
 <li>我就在这一点出了问题。可能你也会出现如下问题：</li>
 </ul>
@@ -410,7 +413,7 @@
 <p>解决方案如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reset --merge</div></pre></td></tr></table></figure>
 <p>之后再pull。</p>
-<h2 id="第七步，也是最后一步，上传代码到github远程仓库。"><a href="#第七步，也是最后一步，上传代码到github远程仓库。" class="headerlink" title="第七步，也是最后一步，上传代码到github远程仓库。"></a>第七步，也是最后一步，上传代码到github远程仓库。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push -u origin master</div></pre></td></tr></table></figure>
+<h2 id="第八步，也是最后一步，上传代码到github远程仓库。"><a href="#第八步，也是最后一步，上传代码到github远程仓库。" class="headerlink" title="第八步，也是最后一步，上传代码到github远程仓库。"></a>第八步，也是最后一步，上传代码到github远程仓库。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git push -u origin master</div></pre></td></tr></table></figure>
 <p>最后，你可以去项目页面查看了，恭喜代码上传成功！</p>
 
       
@@ -621,7 +624,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：建立git仓库"><span class="nav-text">第一步：建立git仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：将项目的所有文件添加到仓库中"><span class="nav-text">第二步：将项目的所有文件添加到仓库中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步：将add的文件commit到仓库"><span class="nav-text">第三步：将add的文件commit到仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步：建立自己的Repository"><span class="nav-text">第四步：建立自己的Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步：将本地的仓库关联到github上"><span class="nav-text">第五步：将本地的仓库关联到github上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六步：上传github之前，要先pull。"><span class="nav-text">第六步：上传github之前，要先pull。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七步，也是最后一步，上传代码到github远程仓库。"><span class="nav-text">第七步，也是最后一步，上传代码到github远程仓库。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：将github账号与ssh连接"><span class="nav-text">第一步：将github账号与ssh连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：建立git仓库"><span class="nav-text">第二步：建立git仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步：将项目的所有文件添加到仓库中"><span class="nav-text">第三步：将项目的所有文件添加到仓库中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步：将add的文件commit到仓库"><span class="nav-text">第四步：将add的文件commit到仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步：建立自己的Repository"><span class="nav-text">第五步：建立自己的Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六步：将本地的仓库关联到github上"><span class="nav-text">第六步：将本地的仓库关联到github上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七步：上传github之前，要先pull。"><span class="nav-text">第七步：上传github之前，要先pull。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八步，也是最后一步，上传代码到github远程仓库。"><span class="nav-text">第八步，也是最后一步，上传代码到github远程仓库。</span></a></li></ol></div>
             
           </div>
         </section>
