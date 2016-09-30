@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title><![CDATA[Eloquent JavaScript教学笔记1]]></title>
+      <url>http://yoursite.com/2016/09/30/Eloquent%20JavaScript%E6%95%99%E5%AD%A6%E7%AC%94%E8%AE%B01/</url>
+      <content type="html"><![CDATA[<p>javaScript的发展飞速，由最初运行在浏览器上的语言发展到前端后端，桌面端移动端通用的语言。JS是每一个想拥有创造力的现代人都要掌握的基本工具。由笑来老师推荐开始学习Eloquent JavaScript，全英文的阅读体验，逻辑更清晰，阐述更明了，建议读原文，在此做些许笔记，以供复习和参考。</p>
+<ul>
+<li>Values, Types, and Operators 值，类型和操作符</li>
+<li>程序的世界就是数据，所有数据都以二进制存在。数据以不同方式组成的块，在javascipt中就叫值，都属于一种数据类型，js中有6种类型numbers数值, strings字符串, Booleans布尔值, objects对象, functions函数, undefined values空值.</li>
+<li>值由名称(true,null)和具体值(123,’abc’)组成。值通过操作符连接和转换。数学操作符(+, -, *, /, and %)，字符串连接符(+)，比较符(==, !=, ===, !==, &lt;, &gt;, &lt;=, &gt;=)， 逻辑运算符(&amp;&amp;, ||)，位运算符(- 使数字变负, ! 非, typeof显示值类型)，三元条件运算符 (?:).</li>
+<li>具体每个数据类型的用法参照《JavaScript 标准参考教程（alpha）》by 阮一峰，<a href="http://javascript.ruanyifeng.com/grammar/types.html" target="_blank" rel="external">点此</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[最精华的高尔夫基础教学视频笔记10]]></title>
       <url>http://yoursite.com/2016/09/27/%E6%9C%80%E7%B2%BE%E5%8D%8E%E7%9A%84%E9%AB%98%E5%B0%94%E5%A4%AB%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B010/</url>
       <content type="html"><![CDATA[<h2 id="最精华的高尔夫基础教学视频笔记10-完结篇"><a href="#最精华的高尔夫基础教学视频笔记10-完结篇" class="headerlink" title="最精华的高尔夫基础教学视频笔记10(完结篇)"></a>最精华的高尔夫基础教学视频笔记10(完结篇)</h2><p>这一部分主要介绍了如何救球，脱离险境。</p>
