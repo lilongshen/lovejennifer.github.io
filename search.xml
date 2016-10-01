@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title><![CDATA[Eloquent JavaScript教学笔记2]]></title>
+      <url>http://yoursite.com/2016/10/01/Eloquent%20JavaScript%E6%95%99%E5%AD%A6%E7%AC%94%E8%AE%B02/</url>
+      <content type="html"><![CDATA[<ul>
+<li>表达式与语句。表达式就是一个一个值，类似于英文中的单词，语句是为了完成某种任务的操作，以分号结尾，类似于英文中的句子。</li>
+<li>变量。变量是获取和储存值的。变量不是盒子，而像章鱼的触手，不包含值，而是抓取值。两个变量可以指向同一个值。也可以赋予变量新的值。当没有值赋予给变量，则会返回undefined值。</li>
+<li>关键字和保留字。它们不能做变量名，完整版如下：<br>“break case catch class const continue debugger<br>default delete do else enum export extends false<br>finally for function if implements import in<br>instanceof interface let new null package private<br>protected public return static super switch this<br>throw true try typeof var void while with yield”</li>
+<li>环境。变量和它们的值所在的空间被称为环境。当程序启动，环境不是空的。它包括语言规范的变量，更多时候是与操作系统交互的变量，就浏览器而言，包括检测到的当前网页的变量和函数，鼠标和键盘的输入。<a id="more"></a></li>
+<li>函数。函数是有值的被包装的程序。这些值可以被应用来运行函数。运行一个函数被称为调用（invoking, calling, or applying），在表达式后面加括号。通常直接使用变量名保存函数。括号中的值是函数中默认的值，称为参数。</li>
+<li>console.log函数。用来输出值，在文本输出设备上显示值。在浏览器中，JavaScript console中显示输出的值。<br>-返回值。当函数产生一个值，被称为返回值。</li>
+<li>side effect 副作用。就是编程语言的函数比数学概念上的函数多出来的那些事情，每个函数都会产生一个返回值，但是当这个返回值可以显示在屏幕上，或者弹出对话框，那么这就是意外的事情了。函数一般认为是没有状态的，每次用相同的输入调用时应当给出相同的输出，且不会影响程序的其它部分。如果函数对程序的状态有影响，这种影响就叫作“side effects”。没有负面意义，只表明附加功能。</li>
+<li>confirm和prompt函数。两个函数是另外可以弹出对话框的函数。confirm函数弹出ok／cancel的对话框，返回布尔值。prompt函数弹出输入对话框，用于与用户交互，提示用户输入信息的对话框。第一个参数用于提示用户输入的信息，第二个参数用于用户输入文本信息，返回值为用户输入的字符串。两个函数在网页开发中不常见，正常网页不需要大量弹出。但在玩具程序和实验中常用。</li>
+<li>控制流(Control flow)。当一个程序超过两行语句时，执行顺序是从上到下。</li>
+<li>条件执行。根据布尔值有两条不同的路线执行。使用if／else关键词。</li>
+<li>循环(while和do)。把需要循环的语句放在大括号内，这些语句称为块。while循环先考虑条件再执行循环语句，do循环则是先执行一次循环语句再考虑条件。</li>
+<li>首字母空格代码(Indenting Code)。即使写成一行，电脑也可以编译出代码，但是未来阅读和debug直观，建议首字母空格，并且换行。</li>
+<li>for循环。把初始变量，限制条件和变化方式都写在for后的小括号中，把循环语句放在大括号里。</li>
+<li>跳出循环break和continue，break表示当满足条件之后，不再循环，直接执行循环外的语句。continue表示立即终止本轮循环，进行下一轮循环。</li>
+<li>变量更新简写。counter = counter + 1;可以写成counter += 1;或者counter++。</li>
+<li>switch分布循环。由多个条件选项时，倾向用switch循环。switch引起循环，case表示条件，break跳出，default默认最终条件。</li>
+<li>首字母大写。由于变量名不可以有空格，所以为了想表达变量的含义，变量名的每个单词首字母大写或者加下划线“_“隔开，是最佳的变量名书写方式。</li>
+<li>注释：单行注释用 // ，多行注释用/<em>   \</em>/。</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[做自己的ceo笔记第一周]]></title>
       <url>http://yoursite.com/2016/10/01/%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84ceo%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E5%91%A8/</url>
       <content type="html"><![CDATA[<h2 id="做自己的ceo笔记第一周"><a href="#做自己的ceo笔记第一周" class="headerlink" title="做自己的ceo笔记第一周"></a>做自己的ceo笔记第一周</h2><p><strong>消费者心理学！一切商业的问题，背后都是人性！</strong></p>
