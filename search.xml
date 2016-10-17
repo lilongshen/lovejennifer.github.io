@@ -4,6 +4,98 @@
   
     
     <entry>
+      <title><![CDATA[Eloquent JavaScript教学笔记3]]></title>
+      <url>http://yoursite.com/2016/10/17/Eloquent%20JavaScript%E6%95%99%E5%AD%A6%E7%AC%94%E8%AE%B03/</url>
+      <content type="html"><![CDATA[<h3 id="1、定义函数。"><a href="#1、定义函数。" class="headerlink" title="1、定义函数。"></a>1、定义函数。</h3><ul>
+<li>把函数值赋给变量。函数由function开头的表达式组成，函数包括小括号内的参数和中括号内的执行主体。可以有多个参数，也可以没有参数。有的函数有返回值，有的没有，只有副作用。return关键词决定函数的返回对象，如果return后为空，则返回undefined。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var power = function(base, exponent) &#123;</div><div class="line">  var result = 1;</div><div class="line">  for (var count = 0; count &lt; exponent; count++)</div><div class="line">    result *= base;</div><div class="line">  return result;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">console.log(power(2, 10));</div><div class="line">// → 1024</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="2、参数和作用域"><a href="#2、参数和作用域" class="headerlink" title="2、参数和作用域"></a>2、参数和作用域</h3><ul>
+<li>函数的参数就像常规变量，但是它们的初始值由调用caller给定，而不是函数自身。</li>
+<li>函数重要的特征是内部的变量，包括参数，都是函数的局部变量。每次调用都会创建一次变量，而且这些变量互不影响。局部变量是在函数内var定义的，函数外var定义的叫全局变量。只要局部变量与全局变量不是相同的名字，则函数内也可以使用全局变量。</li>
+<li>分析lexical scoping词法作用域，要分析函数中的变量由从哪里产生的。函数是唯一产生新作用域的地方。</li>
+</ul>
+<h3 id="3、函数声明。"><a href="#3、函数声明。" class="headerlink" title="3、函数声明。"></a>3、函数声明。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(name());</div><div class="line">function name()&#123;return…; &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>即使函数在代码下方，依然可以执行。因为函数声明不属于从上到下的控制流。请勿把函数声明放在if条件语句或者循环中，避免故障。</li>
+</ul>
+<h3 id="4、调用堆栈。"><a href="#4、调用堆栈。" class="headerlink" title="4、调用堆栈。"></a>4、调用堆栈。</h3><ul>
+<li>就是程序运行时函数的调用过程。例如A函数调用了B函数，那么程序执行到B函数的时候，call stack里就会有A函数，因为函数调用时需要把当前函数入栈，在B函数执行完毕后再从堆栈里将A函数取出，以让程序指针回到A函数继续运行。</li>
+</ul>
+<h3 id="5、可选参数。"><a href="#5、可选参数。" class="headerlink" title="5、可选参数。"></a>5、可选参数。</h3><ul>
+<li>JavaScript对传给函数的参数很宽容，如果函数只能接收一个参数，则多余参数会忽略，如果需要接收多个参数，则空余的会输出undefined。当一个函数不固定参数，可以设置当其它参数等于undefined时，正使用参数的值为固定值，之后无论有几个参数，都能得出相应的值。</li>
+</ul>
+<h3 id="6、闭包。"><a href="#6、闭包。" class="headerlink" title="6、闭包。"></a>6、闭包。</h3><ul>
+<li>函数内部声明的变量n，函数外是无法读取的。JavaScript语言特有的”链式作用域”结构（chain scope），子对象会一级一级地向上寻找所有父对象的变量，所以只有函数内部的子函数才能读取内部变量。闭包就是定义在一个函数内部的函数。闭包可以读取函数内部的变量，同时让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。</li>
+</ul>
+<h3 id="7、递归。"><a href="#7、递归。" class="headerlink" title="7、递归。"></a>7、递归。</h3><ul>
+<li><p>在栈不溢出的情况下，函数自己调用自己。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function power(base, exponent) &#123;</div><div class="line">  if (exponent == 0)</div><div class="line">    return 1;</div><div class="line">  else</div><div class="line">    return base * power(base, exponent - 1);</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(power(2, 3));</div><div class="line">// → 8</div></pre></td></tr></table></figure>
+</li>
+<li><p>但是执行简单的循环比执行多次函数速度快很多。</p>
+</li>
+</ul>
+<h3 id="8、代码基本逻辑和原则。"><a href="#8、代码基本逻辑和原则。" class="headerlink" title="8、代码基本逻辑和原则。"></a>8、代码基本逻辑和原则。</h3><ul>
+<li>很多时候程序的优雅和执行速度是一对矛盾，人类友好代码和机器友好代码也是一对矛盾。很多时候为了能直观的理解代码而牺牲一些速度。<br>很多框架用的都是面向对象的思想，抽出多个实例的共同部分，然后把这个共同部分当做共有函数，把实例当做共有函数的对象。</li>
+<li>基础的原则是如果不是确信需要改良代码，那么就不要急着耍小聪明。不要操之过急，急着使用各种框架。需要的是真正把问题解决掉，而不是挖空心思写一堆没人用的代码。</li>
+</ul>
+<h3 id="9、纯函数和副作用函数。"><a href="#9、纯函数和副作用函数。" class="headerlink" title="9、纯函数和副作用函数。"></a>9、纯函数和副作用函数。</h3><ul>
+<li>纯函数目的在于返回值，包含return，副作用函数目的在于打印出一行代码，包含console.log。</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[做自己的CEO笔记第三周]]></title>
+      <url>http://yoursite.com/2016/10/17/%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84CEO%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%89%E5%91%A8/</url>
+      <content type="html"><![CDATA[<h2 id="做自己的CEO笔记第三周"><a href="#做自己的CEO笔记第三周" class="headerlink" title="做自己的CEO笔记第三周"></a>做自己的CEO笔记第三周</h2><h3 id="1-信息对称"><a href="#1-信息对称" class="headerlink" title="1.信息对称"></a>1.信息对称</h3><ul>
+<li>在市场条件下，想要实现有限的交易，交易双方掌握的信息必须对称，如果不对称，掌握信息越充分的人获得利益越大。</li>
+<li>大品牌全球统一标准，信息对称，令消费者放心和省心。小品牌利用互联网点评体系，令自身透明化，也可以做到令消费者放心和省心。</li>
+<li>鼓励没有品牌的优秀产品利用互联网––点评体系(大众点评)和担保交易(支付宝)，战胜有品牌的平庸之作。</li>
+<li>信息对称是互联网改变商业世界的底层逻辑。全面的数据有助于减少信息不对称。</li>
+<li>信息不对称。一部分是由于知识和技术水平的不同造成。利用这个盈利，有一定合理性。这是对他为获取这部分知识和技能的合理回报。另一部分是信息传播渠道不顺畅。这个需要互联网技术创新和制度改革解决。<a id="more"></a></li>
+</ul>
+<h3 id="2-网络效应"><a href="#2-网络效应" class="headerlink" title="2.网络效应"></a>2.网络效应</h3><ul>
+<li>某种产品对一名用户的价值，取决于使用这个产品的其他用户的数量。用户越多，越有价值，越有价值，用户越多。不断积累用户的黏性。一旦用户总数突破一个临界点之后，就会行成赢家通吃的局面。为工具而来，为网络而留。</li>
+<li>由于赢家通吃，所以先下手为强。</li>
+<li>利用单边或者跨边网络效应构建的商业模式叫平台经济。</li>
+<li>微信只有一边，用户。淘宝有两边，买家和卖家。百度有三边，被索引网站，搜索用户，广告商。</li>
+<li>行成社交，就容易留住客户。</li>
+<li>异业联盟，注重同水平，差异化，丰富性。异业越丰富，用户逃离成本越高。</li>
+</ul>
+<h3 id="3-边际成本"><a href="#3-边际成本" class="headerlink" title="3.边际成本"></a>3.边际成本</h3><ul>
+<li>每多生产一件或多买一件商品，所带来的总成本的增加。边际成本的结构性改变，是互联网经济对传统经济最重要的冲击。</li>
+<li>互联网带来的用户数量理论上无上限，边际成本几乎为零。</li>
+<li>边际成本低的领域。共享经济，线上教育。</li>
+<li>乐视让电视+媒体库导致电视免费。电信运营商让手机+话费导致手机免费。</li>
+<li>实物产品的边际成本不可能为零，因为每一件产品都至少有材料成本本身，不过实物产品的边际成本呈现不断下降的趋势，最终无限接近原材料成本。这是规模经济的底层逻辑。边际成本为0的产品一般为互联网服务，数字化的虚拟产品，文章，音乐，电影等。</li>
+<li>O2O行业如果基于劳动时间的服务，边际成本很难下降。</li>
+<li>互联网产品随着用户规模的增加，产生两种商业模式，1.把用户卖给别人即广告。2.把商品卖给用户即电商。</li>
+</ul>
+<h3 id="4-长尾理论。"><a href="#4-长尾理论。" class="headerlink" title="4.长尾理论。"></a>4.长尾理论。</h3><ul>
+<li>互联网的出现，使得企业规模化地满足人们个性需求成为一种可能。那些原本冷门的，位于需求曲线长尾部分的产品依然可以销售出去。</li>
+<li>小众市场就是大市场。爆品战略，精准就是核心。</li>
+<li>快速满足个性化。快速是核心。</li>
+<li>长尾理论成立有三个核心：没有陈列成本，导致边际陈本几乎为零。打破地域限制，小需求能被收集。个性化能被规模化满足。</li>
+<li>小企业运用长尾理论：借助大平台，做小众爆品。借助多团队，做快速个性。</li>
+</ul>
+<h3 id="5-免费，二段收费。"><a href="#5-免费，二段收费。" class="headerlink" title="5.免费，二段收费。"></a>5.免费，二段收费。</h3><ul>
+<li>免费是将免费商品的成本转移到另一个商品或服务上。免费的真正精髓是二段收费。</li>
+<li>免费商品是，企业用钱买了客户的注意力，朋友圈关系和未来需求。</li>
+<li>场景1，交叉补贴。如果你想得到的是用户以后持续的购买，那就可以把产品的基座免费。例如剃须刀，打印机。</li>
+<li>场景2，先免后收。如果你想得到用户对高端产品的购买需求，则可以对低端版本免费。例如云服务，音乐试听，视频网站，阅读文章。</li>
+<li>场景3，三方市场。如果想得到用户的注意力，行为习惯，人际关系，则对一部分产品免费。例如微信公众号文章免费，俱乐部女士免费，博物馆孩子免费。</li>
+</ul>
+<h3 id="一周总结"><a href="#一周总结" class="headerlink" title="一周总结"></a>一周总结</h3><ul>
+<li>本周分享了互联网世界的五大基本定律。信息对称，网络效应，边际成本，长尾理论，免费策略。</li>
+<li>小米副总裁提出未来的会出现遥控器电商，所有物体都可以连接互联网，都可以用手机控制。智能商品自产生开始，就有渠道属性。电器可以自己提示更换配件和耗材，可以一键下单。这些前提是必须所有的产品都要得到用户的正反馈。</li>
+<li>互联互通，人工智能，大数据；大消费时代，消费升级；渠道革命，线上线下打通。高效零售渠道兴起是未来三个趋势。</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[通往财富自由之路笔记之五]]></title>
       <url>http://yoursite.com/2016/10/10/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%BA%94/</url>
       <content type="html"><![CDATA[<p>本次学到了两个概念，一个方法，开拓多维度学习和元认知能力以及如何训练元认知能力。跨界能获得意想不到的收获，当然前提是开启元认知能力。</p>
@@ -41,9 +133,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[做自己的ceo笔记第二周]]></title>
+      <title><![CDATA[做自己的CEO笔记第二周]]></title>
       <url>http://yoursite.com/2016/10/09/%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84CEO%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E5%91%A8/</url>
-      <content type="html"><![CDATA[<h2 id="做自己的ceo笔记第二周"><a href="#做自己的ceo笔记第二周" class="headerlink" title="做自己的ceo笔记第二周"></a>做自己的ceo笔记第二周</h2><h3 id="1、流量成本"><a href="#1、流量成本" class="headerlink" title="1、流量成本"></a>1、流量成本</h3><ul>
+      <content type="html"><![CDATA[<h2 id="做自己的CEO笔记第二周"><a href="#做自己的CEO笔记第二周" class="headerlink" title="做自己的CEO笔记第二周"></a>做自己的CEO笔记第二周</h2><h3 id="1、流量成本"><a href="#1、流量成本" class="headerlink" title="1、流量成本"></a>1、流量成本</h3><ul>
 <li>零售的核心就是流量成本。我们每获得一个潜在客户，要为此付出的基本价格。企业盈利的关键在于寻找低成本的流量。</li>
 <li><strong>流量成本＝成本/潜在客户数。销售=流量×转化率×客单价。</strong></li>
 <li>互联网电商的崛起是某个时段的产物，是由于互联网人数消费者越来越多，但商户非常少，所以电商流量成本极低，人们搜寻产品购买，只能搜到几家店铺，所以每家店铺客流量极大。但是现在同质商品增多，开始做广告，竞价排名，竞争得到更多的流量，直到广告价格和成本与利润持平为止。所以电商不是什么先进模式，只是恰好处在互联网流量成本低的时刻。先进模式是各种流量来源中流量成本最低的模式。关键在于找到最低的流量成本渠道。比如社群，比如自媒体，比如直播，比如依靠口碑宣传推荐，比如吸引老顾客重复购买，比如到租金低的地方开店。<a id="more"></a></li>
@@ -87,6 +179,10 @@
 <li><strong>只要存在套利，必然存在两个市场，在两个市场中商品交易价格有差异，一个市场低买，另一个市场高卖。但必须保证两个市场都容易买卖，不然买了的商品无法卖掉，会产生亏损。</strong></li>
 <li>刷单刷补贴倒卖门票是低端套利，容易踩法律红线。金融套利才是高端套利。</li>
 </ul>
+<h3 id="一周总结"><a href="#一周总结" class="headerlink" title="一周总结"></a>一周总结</h3><ul>
+<li>本周分享了商业世界的五大逻辑。流量之河，倍率之刀，价量之秤，风险之眼，规则之缝。</li>
+<li>keepCEO谈创业，冷启动从0到4000，相信好的内容一定有好的传播。每天绞尽脑汁写优质原创。早期关注度不是很高，但要慢慢沉淀内容和口碑，一点点积累。之后，锁定目标用户关注和喜爱的垂直社交化媒体，例如百度贴吧，豆瓣，各种论坛，微信群，QQ群。在这些地方密种，长期撰写干货文章，让优质内容汇集人气，积累大量固定粉丝。其次利用口碑传播，鼓励观众分享到朋友圈。之后再考虑拍摄和投放广告宣传。</li>
+</ul>
 ]]></content>
     </entry>
     
@@ -119,7 +215,7 @@
     <entry>
       <title><![CDATA[做自己的CEO笔记第一周]]></title>
       <url>http://yoursite.com/2016/10/01/%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84CEO%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E5%91%A8/</url>
-      <content type="html"><![CDATA[<h2 id="做自己的ceo笔记第一周"><a href="#做自己的ceo笔记第一周" class="headerlink" title="做自己的ceo笔记第一周"></a>做自己的ceo笔记第一周</h2><p><strong>消费者心理学！一切商业的问题，背后都是人性！</strong></p>
+      <content type="html"><![CDATA[<h2 id="做自己的CEO笔记第一周"><a href="#做自己的CEO笔记第一周" class="headerlink" title="做自己的CEO笔记第一周"></a>做自己的CEO笔记第一周</h2><p><strong>消费者心理学！一切商业的问题，背后都是人性！</strong></p>
 <h3 id="心理账户"><a href="#心理账户" class="headerlink" title="心理账户"></a>心理账户</h3><ul>
 <li>把自己的钱分门别类地的存在不同的心理账户中。比如生活必要开支账户，家庭建设和个人成长账户，情感维系账户，个人享乐账户等。各个账户独立存在。</li>
 <li>个人角度。认清自己心理账户的类别和数量划分。</li>
