@@ -466,11 +466,11 @@
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><ul>
 <li>Git鼓励大量使用分支：</li>
 <li>查看分支：git branch</li>
-<li>创建分支：git branch <name></name></li>
-<li>切换分支：git checkout <name></name></li>
-<li>创建+切换分支：git checkout -b <name></name></li>
-<li>合并某分支到当前分支：git merge <name></name></li>
-<li>删除分支：git branch -d <name></name></li>
+<li>创建分支：git branch \&lt;\name></li>
+<li>切换分支：git checkout \&lt;\name></li>
+<li>创建+切换分支：git checkout -b \&lt;\name></li>
+<li>合并某分支到当前分支：git merge \&lt;\name></li>
+<li>删除分支：git branch -d \&lt;\name></li>
 <li>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</li>
 <li>用git log —graph命令可以看到分支合并图。</li>
 <li>Git分支十分强大，在团队开发中应该充分应用。</li>
