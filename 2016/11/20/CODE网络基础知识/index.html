@@ -1,0 +1,947 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="入门," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Longshen's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="互联网是什么？
+互联网是巨大量的独立网络组合，是完全分散的，个体和个体可以任意相连。信息共享是巨大的能量，你有什么有价值的东西和别人分享，别人反之。反正你逃离不了互联网，那么为什么不了解它并使用它。
+
+互联网由什么组成？
+互联网像邮筒，但是传递的不是实物，而是二进制信息binary information，信息由比特bits组成，bit可以被描述成一对相反的物件，开关，对错，10。8 bits =">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CODE网络基础知识">
+<meta property="og:url" content="http://yoursite.com/2016/11/20/CODE网络基础知识/index.html">
+<meta property="og:site_name" content="Longshen's blog">
+<meta property="og:description" content="互联网是什么？
+互联网是巨大量的独立网络组合，是完全分散的，个体和个体可以任意相连。信息共享是巨大的能量，你有什么有价值的东西和别人分享，别人反之。反正你逃离不了互联网，那么为什么不了解它并使用它。
+
+互联网由什么组成？
+互联网像邮筒，但是传递的不是实物，而是二进制信息binary information，信息由比特bits组成，bit可以被描述成一对相反的物件，开关，对错，10。8 bits =">
+<meta property="og:updated_time" content="2016-11-20T14:36:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CODE网络基础知识">
+<meta name="twitter:description" content="互联网是什么？
+互联网是巨大量的独立网络组合，是完全分散的，个体和个体可以任意相连。信息共享是巨大的能量，你有什么有价值的东西和别人分享，别人反之。反正你逃离不了互联网，那么为什么不了解它并使用它。
+
+互联网由什么组成？
+互联网像邮筒，但是传递的不是实物，而是二进制信息binary information，信息由比特bits组成，bit可以被描述成一对相反的物件，开关，对错，10。8 bits =">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: "",
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/20/CODE网络基础知识/"/>
+
+  <title> CODE网络基础知识 | Longshen's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e7ad605417834ab62279ad25e585dd21";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+
+  <div class="container one-collumn  page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Longshen's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CODE网络基础知识
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-20T22:20:00+08:00" content="2016-11-20">
+              2016-11-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/code/" itemprop="url" rel="index">
+                    <span itemprop="name">code</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/20/CODE网络基础知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/20/CODE网络基础知识/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">本文总阅读量
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="互联网是什么？"><a href="#互联网是什么？" class="headerlink" title="互联网是什么？"></a>互联网是什么？</h3><ul>
+<li>互联网是巨大量的独立网络组合，是完全分散的，个体和个体可以任意相连。信息共享是巨大的能量，你有什么有价值的东西和别人分享，别人反之。反正你逃离不了互联网，那么为什么不了解它并使用它。</li>
+</ul>
+<h3 id="互联网由什么组成？"><a href="#互联网由什么组成？" class="headerlink" title="互联网由什么组成？"></a>互联网由什么组成？</h3><ul>
+<li>互联网像邮筒，但是传递的不是实物，而是二进制信息binary information，信息由比特bits组成，bit可以被描述成一对相反的物件，开关，对错，10。8 bits = 1 byte，1000 bytes = 1 kilo byte，1000 kilo bytes = 1 mega byte。</li>
+</ul>
+<h3 id="信息传播？"><a href="#信息传播？" class="headerlink" title="信息传播？"></a>信息传播？</h3><ul>
+<li><p>最初的信息传递非常慢，错误百出，而且太依赖人类。后来开始利用机器，从telegraph电报、braille盲文板、semaphore信号机到今天的electricity，light和radio。一条电缆绑两个灯泡就可以模拟电传播bits，1表示on，0表示off，发送5个0，则通过发送方和记录方约定，记录时间1秒1bit来传输。</p>
+</li>
+<li><p>当然我们希望单位传输时间比1秒再快一些，所以我们需要增加bandwidth带宽，指一个设备的最大传输能力，用bitrate比特率测量。比特率指给定时间内实际发送的比特数量，通常以秒来计算。不同的速度测量叫做latency延迟，是指一个bit从发送者到接收者所用的时间。8 million bits = 1 megabyte，所以bitrate = 8 Mbps。人类没法这么快，但是机器可以。<a id="more"></a></p>
+</li>
+</ul>
+<h3 id="电线，电缆和无线？"><a href="#电线，电缆和无线？" class="headerlink" title="电线，电缆和无线？"></a>电线，电缆和无线？</h3><ul>
+<li>哪种电缆可以传播这么多信息，这些信号可以传播多远？</li>
+<li>一种方式是通过ethernet wire以太网，很廉价，用铜线传输电子脉冲electronic pulses。但是传输距离很近，经常发生信号丢失或者被干扰。</li>
+<li>短距离远远不够，我们需要传播距离越远越好，那么自然就想到光速比电要快。我们可以把bits当作光束一样通过光纤电缆fiber optic cable传输，光纤电缆被设计为反射光的玻璃线，光束在电缆里上下反弹跳动，直到到达接收端。根据反弹角度不同，我们可以同时传送不同的bits，所有的传输都是用光速。2008年埃及亚历山大附近的电缆中断，极大地影响了大多中东国家和印度的网络。但是光缆非常昂贵并且安装复杂。</li>
+<li>如果我们想无线连接，那就要依靠radio无线电。无线比特传输机器通常是无线电信号塔。发送信号的机器需要翻译1010这些二进制转成无线电的不同频率。接收机器逆转这一过程，并将其转回。可以转回到电脑上，因此可以无线上网，但是远离距离源就会接收到乱码。至今我们依然使用有线连接，无线上网只是将bits发送到无线路由器，然后通过物理的线路长途跋涉穿洋过海进行传输。</li>
+<li>传输bits的物理方法可能会改变，无论是卫星之间的激光传输还是无人机，二进制的信息表达和发送与接收的传输协议都是一样的。</li>
+</ul>
+<h3 id="IP地址和DNS"><a href="#IP地址和DNS" class="headerlink" title="IP地址和DNS"></a>IP地址和DNS</h3><ul>
+<li>在1970年之前，网络没有互相交流的标准方法。互联网是网络的网络，全球范围内连接了数十亿的设备。个人网络连接到互联网服务提供商ISP，ISP连接其他地方的ISP，相互联系。</li>
+<li>互联网是一个真正的设计理念和架构的协议。协议是一个规则和标准，如果各方都同意使用它，将使他们无障碍通信。所有的不同设备在互联网上都有自己独特的地址。地址只是互联网上一个数字，类似电话号码或者一种街道地址。具有唯一性。地址系统在互联网上是相似的，形成一个互联网通信中使用的最重要的协议，因特网协议或者叫IP。计算机的地址称为IP地址，访问网页是你的电脑在询问其他电脑上的信息。你的电脑发送一个信息到另一台电脑的IP地址上，同时也把自己的IP地址告知对方，然后对方对已告知IP地址做出响应。</li>
+<li>IP地址不仅仅是一串数字，像家庭住址和身份证号码一样，每一部分都有自己的意义。像所有数字数据一样，这些数字也用bits表示，传统的IP地址是32bits的，地址中的每一部分占用8bits(174.129.14.120)。早期的数字通常由国家网络下分区域网络下分子网络再到具体设备。现在不再有国家网络和区域网络，只有网络和子网络。这种IP地址版本被称为IPv4，设计于1973年，可容纳40亿的唯一IP地址。但是互联网越来越受欢迎，40亿远远不够。后来发明出另一种格式，叫做IPv6，采用128位地址，容纳340后加36个零的唯一IP地址。这样几乎地球上的每一粒沙子都有了自己的IP地址。</li>
+<li>大多数用户不关心IP地址，它们关心的是域名系统DNS(Domain Name System)，每一个域名例如www.example.com与唯一IP地址相连接。电脑向DNS服务器发送访问/查找域名的请求，DNS向其他DNS索要域名对应的IP地址，并保存下来，然后把这个IP地址传回给电脑。我们如何让数十亿的设备来找到数十亿的网站呢？没有一个DNS服务器可以处理所有设备的所有请求。DNS服务器分布式连接，并且划分各个区域，主要的负责区域包括.org，.com，.net。DNS最初被创造为公开的交流协议，为政府和教育机构服务。因为它的开放性，容易被黑客网络攻击。一个例子就是DNS欺骗，黑客进入DNS服务器然后改变它，把域名与一个错误的IP地址相关联，让用户进入一个冒牌网站。</li>
+<li>互联网在飞速发展，但是域名系统DNS和网络协议是永久不变的。</li>
+</ul>
+<h3 id="包packets，-路由routing，可靠性reliability"><a href="#包packets，-路由routing，可靠性reliability" class="headerlink" title="包packets， 路由routing，可靠性reliability"></a>包packets， 路由routing，可靠性reliability</h3><ul>
+<li>数据是如何非常可靠地传输给你的？你可能以为有一条专线连接服务器和你，你需要一个请求，服务器就发回给你。绝对不是这样的。如果网络是直接专用的连接，那么网络没办法让数百万的用户交流，更没办法保证所有的电脑和线路一直工作。相反，数据传输的过程是非常间接的，没有固定的路径，在传输过程中会不断改变路径。传输过程中的数据我们称为packet一包数据，传输过程类似于开车去目的地，一条路交通堵塞就换一条路走。就像车可以运输货物，许多种类的数据信息可以由IP packets运输。想象航天飞机要从建造地到发射地，不适合组装好之后再运输，所以拆分成很多部分运输，它们通过不同的路径，不同时间到达目的地。一旦全部到达目的地，就把这些部分组转好。如果要把很清晰的照片传给别人，那么照片是由数百万个1，0bits，打包成一个packet。这些信息迅速分裂成数百个或数千个小部分packets，这些packets没有司机，也无法选择路线。每个packets都有自己的IP地址，记录了从哪里来到哪里去。</li>
+<li>互联网上一种特殊的电脑叫做路由器，就像是交通管理员一样，保持packets在网络中通常。如果一个路径堵塞了，其他独立的packets会走其他路径，可能到达目的地的时间有细微差别，或者并不按照顺序。作为网络协议的一部分，每个路由器都记录了多个不同路径来传送packets，并且选择最廉价cheapest的可用路径，cheapest不仅指花费，还指时间和其他非技术因素，例如政治，企业间关系。往往最好的数据传输路径不是直接传输。选择路径可以使网络有容错性，意味着网络即使有其他干扰也可以正常传输packets。这是互联网关键原理的基础：可靠性。</li>
+<li>TCP(transmission control protocol)传输控制协议，TCP管理着所有发送和接收的数据，例如packets。当很多被分离的packets到达目的地时，TCP会做清单全面清查，并且传回接收到每个packet的信息。如果所有的packets都到了，TCP会签名目录清单，完成传输。如果TCP发现有些部分缺失，则不会签名。每一个缺失的不完整的packet，服务器会重新发送它们。一旦TCP确认这些部分是所缺失的部分，完成传输。</li>
+<li>TCP和路由系统是可伸缩扩展的，它们可以与8个或者8十亿个设备合作。由于存在容错性和冗余性的原理，路由越多网络越可靠。我们可以在不中断连接的情况下扩展网络。数以亿计的电子设备和网络可以连接，可以互相交流工作，是因为大家都遵循互联网数据传输的标准。互联网设备和路由帮助所有的packets去被组装的目的地。</li>
+</ul>
+<h3 id="HTTP和HTML"><a href="#HTTP和HTML" class="headerlink" title="HTTP和HTML"></a>HTTP和HTML</h3><ul>
+<li>URL(Uniform Resourse Locator)统一资源定位器，就是网址。HTTP(Hypertext Thansfer Protocol)超文本传输协议。可以当作是浏览器与服务器交流的语言。当一个电脑向另一个电脑要一份文件，即发出GET请求，请求文件的名称。如果你尝试登陆一个网站并加载登录页面，正在做的事就是发送一个GET请求到服务器。服务器返回写着登录页面的HTML代码。HTML(Hyper Text Markup Language)代表超文本标记语言，告知网络浏览器如何制作网页，包括标题，字体，加粗，超链接，加图片等等。文本直接包含在HTML里，但是图片和视频则有自己URL的独立文件，也需要请求。所以有大量图片和语音的HTML网页通常加载的比较慢，因为请求较多。另外一个请求是POST请求，用来填写表格或输入一个搜索查询。发送纯文本请求到web服务器。服务器来计算是否有数据可以配对。COOKIES是网站用来记住你是谁的唯一途径，所有的cookie数据是一个ID卡，是一串代表个人的数字。下一次重新访问网站时，浏览器会在发送请求时自动附上这个ID，所以服务器看到请求和ID，则直接打开个人网页。</li>
+<li>互联网是完全开放的，所有的连接是共享的，信息传输是以明文方式的。这使得信息安全是个重要议题。安全的网站会在一个安全的频道上交流，使用一种叫做SSL(Secure Sockets Layer)安全套接字层和继任者TLS(Transport Layer Security)传输层安全保护。可以当作在信息周围包裹的一层安全层，防止他人的窥探或者篡改。有锁出现在浏览器地址栏，并且遵循HTTPS(Hypertext Thansfer Protocol Secure)协议，确保HTTP请求的安全性。当一个网站与浏览器进行安全连接时，首先提供一个数字证书DIGITAL CERTIFICATE，表明ID，证明这确实是它声称的网站。数字证书由专业证书机构颁发，这些机构审核网站，颁发证书，确认身份，就像政府颁发ID或护照一样。如果网站想要进行安全连接，但是没有合适的证书，那么浏览器就会发出警告。这就是浏览器协议，网络协议的一部分。</li>
+<li>HTTP和DNS管理网络文件的传输和接收。TCP/IP和路由把信息分解成众多小packets传输。packets本身由二进制数字组成，连续的1、0。物理上由电线， 电缆和wifi传播。</li>
+</ul>
+<h3 id="加密Encryption和公钥Public-keys"><a href="#加密Encryption和公钥Public-keys" class="headerlink" title="加密Encryption和公钥Public keys"></a>加密Encryption和公钥Public keys</h3><ul>
+<li>互联网是开放的公共的，但是我们也有交换一些私人数据的需求，比如银行卡号码，密码，电子邮件等。任何信息都可以通过加密来变成隐私信息，改变或者打乱原始信息信息来隐藏自己。解密就是恢复为原始信息，使信息变得可读。第一个加密方法是以罗马将领JULIUS CAESAR的名字命名的，Caesar Cipher凯撒密码。这个密码是替换算法，原始信息中的每个字母按照字母表的顺序用固定间隔后的字母来代替原字母。如果这个间隔仅仅由发送者和接收者知道，那么这个方法就叫做key钥匙，使读者可以解开秘密。但是这个算法有个致命的缺点，他人很容易通过逐个尝试来找到key，因为英文单只有26个，尝试26次总能破解。后来改进为每个字母都增大加密数量级，用不同的间隔来加密不同字母，key不再是一位数字。10位数字的key会产生100亿种可能性。人类要破解得花好几个世纪，但是我们今天的时代，电脑可以轻松在几秒钟就试遍这100亿种可能性。所以要有新的方法来让破解变的更困难，要在合理时间内可能性更多。如今的信息交流被256bit的key加密，仅仅一个字母就要破解数万亿年。但是随着计算机计算功能的指数型上升，这种方法也会变得不一定安全。</li>
+<li>当发送者和接收者共享同一个密钥来加密和解密信息，称为对称加密SYMMETRIC ENCRYPTION。这种加密要求两人提前私下对秘密的key达成一致，但是互联网是开放和公开的，两人无法私下达成一致。所以计算机使用的是非对称加密密钥ASYMMETRIC ENCRYPTION，公钥PUBLIC KEY可以与任何人交换，但是私钥PRIVATE KEY不会分享。公钥是用来加密信息的，所有人都可以用它来创建加密信息。而私钥则只能解密，通过带有私钥的电脑。像信箱一样，其他人有钥匙打开投递口放入信件，但是只有自己可以打开邮箱来取出所有的信件。公钥密码体制是公开互联网上加密信息的基础，包括访问网络的安全协议SSL和TLS。浏览器地址栏有锁或者显示Https，那么就表明在使用公钥密码体制来交换信息。</li>
+</ul>
+<h3 id="网络安全和犯罪"><a href="#网络安全和犯罪" class="headerlink" title="网络安全和犯罪"></a>网络安全和犯罪</h3><ul>
+<li>信用卡被盗，权力机关和服务机构记载的个人信息记录被公开，甚至黑客能黑进核电厂和无人驾驶飞机，网络犯罪越来越普遍。这一切都是利用硬件或者软件的漏洞或者利用人自身使用软件的疏忽进行。具体是以以下三种进行的software viruses软件病毒，distributed-denial-of-service(DDoS)拒绝服务攻击，Phishing scams 钓鱼欺骗。</li>
+<li>软件病毒，是一个可执行的程序，被用户无意中安装，然后对用户电脑进行破坏和干扰，也可能传播到其他电脑。软件病毒会伪装成系统安全升级来诱导受害者安装，也可能受害者电脑上的软件有漏洞，攻击者可以在对方毫不知情的情况下自行安装病毒。一旦病毒在电脑上存在，可能会偷取或者删除你的文件，控制其他程序甚至远程操纵电脑。</li>
+<li>黑客可以操控数以万计的电脑来用作电子军团digital army或者称为僵尸网络botnet来攻击网站。这种攻击叫做distributed-denial-of-service拒绝服务攻击。攻击是指给一个网站不停地发送请求，分布意味着多个不同电脑同时发送。多数网站设定了一天响应数百万个请求，但是如果有人从不同地方发送上亿个请求，电脑就会过载overloaded然后停止响应。</li>
+<li>钓鱼欺骗是指有人发送大量欺骗性邮件，诱导人们分享自己私密的信息。欺骗性邮件会伪装成人们信任的邮件来源，要求人们点击链接，点击链接之后，会带受害者进入一个假页面，然后要求对方输入账户和密码，黑客可以利用登陆证书(login credentials)来连接受害者真正的账户窃取信息甚至偷钱。</li>
+<li>你可能认为多数网络犯罪是由于电脑系统的安全设计有问题，但是据统计超过90%的被黑客攻击是由于人们犯的愚蠢错误，比如自己贪小便宜点开虚假网站链接输入自己的信息，或者随便下载不明真相安装包，或者捡了一个U盘随意插入电脑USB插口。</li>
+<li>以下是一些个人可以避免被黑客攻击的方法。<ul>
+<li>用较长的复杂密码</li>
+<li>检查真实的网站地址</li>
+<li>经常更新安全系统</li>
+<li>不要安装你不信任的软件</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/入门/" rel="tag">#入门</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/20/做自己的CEO笔记第八周/" rel="next" title="做自己的CEO笔记第八周">
+                <i class="fa fa-chevron-left"></i> 做自己的CEO笔记第八周
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/20/CODE网络基础知识/"
+           data-title="CODE网络基础知识" data-url="http://yoursite.com/2016/11/20/CODE网络基础知识/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="Longshen" />
+          <p class="site-author-name" itemprop="name">Longshen</p>
+          <p class="site-description motion-element" itemprop="description">You can not predict tomorrow. But you can grasp today!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lovejennifer" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2584247623" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网是什么？"><span class="nav-text">互联网是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网由什么组成？"><span class="nav-text">互联网由什么组成？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息传播？"><span class="nav-text">信息传播？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电线，电缆和无线？"><span class="nav-text">电线，电缆和无线？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP地址和DNS"><span class="nav-text">IP地址和DNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包packets，-路由routing，可靠性reliability"><span class="nav-text">包packets， 路由routing，可靠性reliability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTML"><span class="nav-text">HTTP和HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加密Encryption和公钥Public-keys"><span class="nav-text">加密Encryption和公钥Public keys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络安全和犯罪"><span class="nav-text">网络安全和犯罪</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Longshen</span>
+</div>
+
+<div class="powered-by">
+  博客框架参见 - <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  主题使用参见 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"lovejennifer"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
