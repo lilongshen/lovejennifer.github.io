@@ -1,0 +1,898 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="思考," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Longshen's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="罗辑思维笔记一
+德国大诗人歌德在其不朽名著《浮士德》中，有这样一句话：一切理论都是灰色的，只有生活之树常青。我们所有的理论、知识、体系与道理，其实是为了解释或推演外部世界而建立起来的数理模型。这些模型并无对错之分，有的只是适用程度与领域的大小区别。王兴说他在硅谷，学到这样一句话：Keep growing, fuck everything else.——只有成长最重要，其它就是垃圾。许多问题是没必要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="罗辑思维笔记一">
+<meta property="og:url" content="http://yoursite.com/2017/01/13/罗辑思维笔记一/index.html">
+<meta property="og:site_name" content="Longshen's blog">
+<meta property="og:description" content="罗辑思维笔记一
+德国大诗人歌德在其不朽名著《浮士德》中，有这样一句话：一切理论都是灰色的，只有生活之树常青。我们所有的理论、知识、体系与道理，其实是为了解释或推演外部世界而建立起来的数理模型。这些模型并无对错之分，有的只是适用程度与领域的大小区别。王兴说他在硅谷，学到这样一句话：Keep growing, fuck everything else.——只有成长最重要，其它就是垃圾。许多问题是没必要">
+<meta property="og:updated_time" content="2017-01-13T02:46:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="罗辑思维笔记一">
+<meta name="twitter:description" content="罗辑思维笔记一
+德国大诗人歌德在其不朽名著《浮士德》中，有这样一句话：一切理论都是灰色的，只有生活之树常青。我们所有的理论、知识、体系与道理，其实是为了解释或推演外部世界而建立起来的数理模型。这些模型并无对错之分，有的只是适用程度与领域的大小区别。王兴说他在硅谷，学到这样一句话：Keep growing, fuck everything else.——只有成长最重要，其它就是垃圾。许多问题是没必要">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: "",
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/01/13/罗辑思维笔记一/"/>
+
+  <title> 罗辑思维笔记一 | Longshen's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e7ad605417834ab62279ad25e585dd21";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+
+  <div class="container one-collumn  page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Longshen's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                罗辑思维笔记一
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-13T17:25:00+08:00" content="2017-01-13">
+              2017-01-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/13/罗辑思维笔记一/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/13/罗辑思维笔记一/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">本文总阅读量
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="罗辑思维笔记一"><a href="#罗辑思维笔记一" class="headerlink" title="罗辑思维笔记一"></a>罗辑思维笔记一</h2><ol>
+<li><p>德国大诗人歌德在其不朽名著《浮士德》中，有这样一句话：<br>一切理论都是灰色的，只有生活之树常青。<br>我们所有的理论、知识、体系与道理，其实是为了解释或推演外部世界而建立起来的数理模型。这些模型并无对错之分，有的只是适用程度与领域的大小区别。<br>王兴说他在硅谷，学到这样一句话：Keep growing, fuck everything else.——只有成长最重要，其它就是垃圾。许多问题是没必要解决的，你只需要成长，成长，成长，变得足够大，足够强。这时候你扭头回看来路，就会发现，许多问题都是人生或创业的必然，是人性的自然，这些问题不可能解决，就算解决了也会出现更闹心的新问题。当你变得足够强大，这些问题或是会自然消失，或是已经不再称其为问题。<br>马云之所以成功，不是他做对了什么，其实马云错的比谁都多，但马云有个大的格局，大的平台。<br>打个比方来说，人家马云这个大格局，就如他有许多大篮子，人家是不把所有鸡蛋放在一只篮子里。你这里可好，鸡蛋就那么几枚，非要搁一块玩专注，结果被变动的时局这么一撞，哗啦啦，你捧着满手的蛋黄蛋清，想哭都哭不出来。人生必须要玩到足够大才行。<br>人类社会的发展、人生的成长及至具体而微的创业，都有一个共同的规律：<a id="more"></a><br>第一个阶段是懵懂阶段。面对未知的一切，无知无识，茫然不知所措，只能被动地任由自然宰割，这个叫自然阶段。<br>第二个阶段是认知阶段。面对空茫之地，人们学习或创建各种数理模型，总结种种似是而非的道理或逻辑，但这些理论体系或道理规律，并非是真实世界的反映，只是我们实在没有咒念，不得不拿这么个东西应付一下。<br>第三个阶段，就是实践阶段，于实践中总结得失。<br>为了避免于连续性的试错中折戟沉沙灰飞烟灭，我们就需要个大的思维框架，需要大的心胸与格局，以安放我们那颗脆弱的玻璃心。<br>至高的智慧是慈悲，最得体的表情是笑容，最适宜的心境是平和，最有教养的表现是对他人的尊重。<br>人生是相对的：困难重重，那是因为思维自我局限；痛苦煎熬，那是因为心灵没有打开；行步艰难，那是因为目标太小；知道道理却不会灵活应用，那是因为人生实践不足。</p>
+</li>
+<li><p>沉沦在社会底层，是没有公道可言的。<br>人必须要玩不可替代的。一个人的人生，对生活的了解与独特经历，是任何人也无法替代的。<br>想要改变自己的命运，同质化竞争是没有出路的。必须要用复合式战略，展示你不可替代的人生！<br>你迷茫，只是因为缺乏人生目标。更缺少人生的奋斗实践。<br>杰克伦敦，他有一个长久的逆袭目标，而后是不断的行进，事实上他的人生，远比我们记述的更要光怪陆离。因为目标的远大，他要做无计其数的事情。这些经历累积在他的记忆中，构成了他全新的自我。自我越来越丰富，情绪化的东西越来越丰盈。<br>消除生命中的空迷惶惑，立即行动是唯一的办法。</p>
+</li>
+<li><p>特蕾莎修女，一位伟大的智者。她把自己的一生，都献给了穷人。<br>她的人生信条，许多人耳熟能详：——人们经常是不讲道理的，没有逻辑和以自我为中心的。不管怎样，你要原谅他们。<br>人的一生，都在成长。所谓成长，就是要战胜自我的不足与缺陷，一个人如果连道理都不讲了，不是遭遇了成长性紊乱，脆弱的自我面临着崩溃，陷入到恐慌的固执之中，就是经济上面临着危机，道德与尊严感同时大幅飙降。说清楚了就是，他已经无路可退了，你偏还要再逼一步，让他承认你对他错，你有多无聊，才会如此逼迫一个绝路之人？<br>特蕾莎修女说：——即使你是友善的，人们可能还是会说你自私和动机不良。不管怎样，你还是要友善。</p>
+</li>
+<li><p>“我们90%的爱与痛，都和一个基本事实有关——大多数成年人，心理水平是婴儿，这样的成年人是巨婴，这样的国家，是巨婴国。 ”  ——武志红<br>婴儿的心理主要是三条：第一叫母婴共生，第二叫全能自恋，第三条叫偏执分裂。<br>婴儿生下来到六个月的时候，他是完全没有任何行动能力的，一切吃喝拉撒睡玩都得靠母亲来伺候他。而且，这个时候他的主观意识其实分不清自我和外界之间的区别，所以这个时候的婴儿和母亲是完全的共生体，这就叫母婴共生。<br>全能自恋和偏执分裂，它本质上是一件事的两个面。这就是婴儿的心理状态，他觉得自己是神，所以叫全能自恋。如果没有得到满足，要么就是绝对的愤怒表达出来，要么就是我干脆毁了自己，这就叫偏执分裂，世界对他来说没有灰度。<br>家庭共生关系产生的结果，是中国家庭人和人之间的边界分不清楚。所以武志红讲，中国家庭有很多糨糊逻辑，都是边界不清楚。<br>第一，我的事就是你的事，你们的事就是我的事，你们的关系我要管，我们的关系你也要处理。<br>第二，我，就等于我们；你，你就等于你们。比如老婆要是跟小姑子之间闹点矛盾，她回家是找丈夫毛病的，你就代表你们嘛。<br>第三个糨糊逻辑呢，是我们互相之间是不能有边界的。我们之间完全没有秘密，要共享所有的账户、密码等等。<br>第四个糨糊逻辑，连时间上的边界都没有，夫妻之间一吵架，陈芝麻烂谷子全部都兜出来。<br>这叫共生绞杀，这造成了中国的很多成人在心理结构上是个巨婴，就是没有办法摆脱病态共生。<br>唠叨不是话多，而是一种超越边界的控制性的咒语。<br>我自己的体会，有用的方式大概是四种。<br>第一种就是爱，爱是值得我们用一生的时间去追逐的一种能力。我们中国式父母经常说我对你好，那不叫爱，那叫摆布和控制。爱是什么？正好是它的反面，叫理解和接纳。<br>第二种方法，是用理智上认知自由主义，来治疗我们那个病态共生的集体主义，通过读书，通过读文章。在这方面对我影响比较突出的，是连岳、雾满拦江、和菜头和李笑来。<br>第三个方法，叫觉知。我们作为一个巨婴，当别人不符合我们的想象怒气蒸腾时，怎么办呢？稍微慢一拍再去说话。因为人对自己情绪的觉知和觉察，本身就在瓦解这个情绪。<br>最最重要的治疗方案，我觉得对我自己特别有用，就是行动。<br>一个巨婴他最恐怖的牢笼是永远在自己的脑子当中生活。一旦开始行动，这种行动包括各个层次的，有可能是做一把木头勺子，也可能是要去创建一家伟大的公司。这不重要，重要的是你只要踏出一步开始行动，马上就脱离了那个想象中的世界。因为你不断地要面临犯错，面临纠正，面临要和他人的协作，面对要说服他人，要接受自己的不完美。一步一步往前走，你就把自己身体里的那个巨婴抛在自己的身后。</p>
+</li>
+<li>前段时间，有家野生老虎公园，粗事了。<br>你懂得，这种地方，就是游客自己驾车，在里边慢慢的开。老虎蹲在一边，看着你们这一枚枚罐头移动，有点象吃回转寿司的意思，等哪只罐头打开。<br>善未易明——最懵懂的人，会毫无理由的认为自己是善良的，更懵懂的人，对他人强加于自己的伤害无力抗拒，只要对方一句话：我是为你好，就一头栽地上任人蹂躏践踏。实际上善的古意，是说话做事恰到好处。但看看自己，看看身边的人，就会知道我们距离善良的智慧究竟有多远。<br>理未易察——每一个道理，其实都是智慧的一个侧面。昧于智慧之人，似乎听明白了大道理，实际上只是认识组成大道理的每个字，对于道理的智慧原理，根本一无所知。所以会有人听了无数的大道理，却仍然过不好自己的人生。只因为理未易察，道理需要理解领悟，才能够融入自己人生的。</li>
+<li><p>到了他自己努力想弄明白，却只差临门那一脚的时候，再在一边指点。到了他心里明白，却苦于找不到表达的方法时，就启发他。如果他能做到举一反三，就多举例子。</p>
+</li>
+<li><p>游戏公司吸引注意力的秘诀：利益邀请，邪恶元素，暧昧关系，成就动力、随机奖励、即时反馈、勋章系统、荣誉捆绑、悬念设置、胜率控制、任务社群、独特标识、声音设计。</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/思考/" rel="tag">#思考</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/13/精英日课笔记三/" rel="next" title="精英日课笔记之三">
+                <i class="fa fa-chevron-left"></i> 精英日课笔记之三
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/13/罗辑思维笔记一/"
+           data-title="罗辑思维笔记一" data-url="http://yoursite.com/2017/01/13/罗辑思维笔记一/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="Longshen" />
+          <p class="site-author-name" itemprop="name">Longshen</p>
+          <p class="site-description motion-element" itemprop="description">You can not predict tomorrow. But you can grasp today!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">65</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lovejennifer" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2584247623" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#罗辑思维笔记一"><span class="nav-text">罗辑思维笔记一</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Longshen</span>
+</div>
+
+<div class="powered-by">
+  博客框架参见 - <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  主题使用参见 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"lovejennifer"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
