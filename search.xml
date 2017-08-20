@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title><![CDATA[Python notes1]]></title>
+      <url>http://yoursite.com/2017/08/20/Python%20notes%201/</url>
+      <content type="html"><![CDATA[<h2 id="1wd1今日收获："><a href="#1wd1今日收获：" class="headerlink" title="1wd1今日收获："></a>1wd1今日收获：</h2><ul>
+<li><code>open</code>打开文档流</li>
+<li><code>readline()</code>，读取每一行，返回string</li>
+<li><code>strip(&#39;\n&#39;)</code>，去除字符，返回string</li>
+<li><code>split(&#39;,&#39;)</code>，分离字符串，返回list</li>
+<li><code>h = {l[0]:l[1]}</code>，建立dictionaries</li>
+<li>for循环大法好，充分利用它，它不会累死，让它一直跑吧</li>
+</ul>
+<h2 id="1wd2今日收获："><a href="#1wd2今日收获：" class="headerlink" title="1wd2今日收获："></a>1wd2今日收获：</h2><ul>
+<li>使用<code>with open() as xxx</code>, 不需要关闭file</li>
+<li><code>string.strip()</code>, 去掉某些字符串，返回str</li>
+<li><code>string.split(&#39;,&#39;)</code>，根据()里的内容，分开字符串，返回array</li>
+<li>创建dictionaries的方法：建立空dictionaries，<code>d = {}</code>, 然后再补充key 和d[key]</li>
+</ul>
+<h2 id="1wd3今日收获"><a href="#1wd3今日收获" class="headerlink" title="1wd3今日收获:"></a>1wd3今日收获:</h2><ul>
+<li>昨天对于空dicttionaries，补充key和d[key]的理解是不深刻的。</li>
+<li><p>整个作业的最难点就在于认识到如何建立dict，就是一个用法：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">d = &#123;&#125;</div><div class="line">d[key] = value</div></pre></td></tr></table></figure>
+</li>
+<li><p>并且活学活用，例如作业里的把list转变dict</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">d[data[0]] = data[1]</div></pre></td></tr></table></figure>
+</li>
+<li><p>又例如作业里的保存天气值</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">history = &#123;&#125;</div><div class="line">if city in d.keys():</div><div class="line">    history[city] = d[city]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="1wd4今日收获"><a href="#1wd4今日收获" class="headerlink" title="1wd4今日收获:"></a>1wd4今日收获:</h2><ul>
+<li><code>if __name__ == &#39;__main__&#39;</code>到底是什么鬼，在<a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" target="_blank" rel="external">Stackoverflow相关问题</a>中找到了答案。</li>
+<li>使用多个<code>def</code>和<code>if __name__ == &#39;__main__&#39;</code>来写查天气程序。保存天气值的问题又出现了，原来使用的新建<code>{}</code>然后循环，在拿出去当作函数调用时，却无法使用。只能转变方法用<code>list</code>的<code>append</code>函数来增加，然后继续通过循环来输出。</li>
+<li>及时<code>git commit</code>,先让程序跑起来，然后丰富各个功能，小步迭代，逐步优化。让自己的github绿油油，及时代码质量暂时不高，也体现强度和韧性啊。</li>
+<li>快捷缩写。  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git config --global alias.st status</div><div class="line">$ git config --global alias.ci commit</div><div class="line">$ git config --global alias.pu push</div><div class="line">$ alias ll=&apos;ls -lG&apos;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="1wd7今日收获"><a href="#1wd7今日收获" class="headerlink" title="1wd7今日收获"></a>1wd7今日收获</h2><ol>
+<li><p>见贤思齐，学习<a href="https://github.com/thxiami/Py101-004" target="_blank" rel="external">thxiami</a>和<a href="https://github.com/Vwan/Py101-004" target="_blank" rel="external">Vwan</a>，能力不够就模仿，跟随。他们和教练一样都是我的老师。</p>
+</li>
+<li><p>完善weather程序后，发现久违的git错误。原因不明，git push失败，所以尝试git pull。结果出现以下错误。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">You have not concluded your merge (MERGE_HEAD exists).</div><div class="line">Please, commit your changes before you can merge.</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>之后查找<a href="https://stackoverflow.com/questions/11646107/you-have-not-concluded-your-merge-merge-head-exists" target="_blank" rel="external">stackoverflow</a>找到解答。<br>不知原因造成冲突，<code>git merge --abort</code>取消即可解决冲突。</p>
+<ol>
+<li><p>在@vwan那里学到了，算法性能比较。使用timeit 模块比较两个方法的运行时间；使用cProfile or profile比较两个方法的内部调用情况。记录下来。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from timeit import timeit</div><div class="line">t1=timeit(generate_random_r1,number=1000)</div><div class="line">t2=timeit(generate_random_r2,number=1000)</div><div class="line">print (f&quot;R1 duration:&#123;t1&#125;&quot;)</div><div class="line">print (f&quot;R2 duration:&#123;t2&#125;&quot;)</div></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import cProfile</div><div class="line">cProfile.run(&quot;generate_random_r1()&quot;)</div><div class="line">cProfile.run(&quot;generate_random_r2()&quot;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用列表解析式。代码行短，运行快。\n<br> <code>[int(i) for i in str(randint(1,20))]</code> \n<br>[]为返回值，int(i)为[]中的各元素，for循环是条件。</p>
+</li>
+<li><p>RTFM,没有好好查文档，提了小白问题。记录一下。<br> print(f”{num}”),其中print里为什么有f，ok，现成模板给你，见<a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings" target="_blank" rel="external">文档</a>，恩，这个用法还有个学名叫<a href="https://stackoverflow.com/questions/39081766/what-are-formatted-string-literals-in-python-3-6" target="_blank" rel="external">Formatted string literals</a>，stackoverflow有完美的解释。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">title = &apos;Mr.&apos;</div><div class="line">name = &apos;Tom&apos;</div><div class="line">msg_count = 3</div><div class="line"></div><div class="line"># This is explicit but complex</div><div class="line">print(&apos;Hello &#123;title&#125; &#123;name&#125;! You have &#123;count&#125; messages.&apos;.format(title=title, name=name, count=count))</div><div class="line"></div><div class="line"># This is simple but implicit</div><div class="line">print(&apos;Hello %s %s! You have %d messages.&apos;%(title, name, count))</div><div class="line"></div><div class="line"># This is both explicit and simple. PERFECT!</div><div class="line">print(f&apos;Hello &#123;title&#125; &#123;name&#125;! You have &#123;msg_count&#125; messages.&apos;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>将列表组合成字符串。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">num = random.sample(range(1,9),4)</div><div class="line">print(num)</div><div class="line">print ((&quot;&quot;).join(str(x) for x in num))</div></pre></td></tr></table></figure>
+<p> <code>(&quot;&quot;).join()</code>完美的方法</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[The Personal MBA]]></title>
       <url>http://yoursite.com/2017/08/20/The%20Personal%20MBA/</url>
       <content type="html"><![CDATA[<h2 id="The-Personal-MBA"><a href="#The-Personal-MBA" class="headerlink" title="The Personal MBA"></a>The Personal MBA</h2><ul>
