@@ -4,6 +4,51 @@
   
     
     <entry>
+      <title><![CDATA[疯狂吸收区块链概念]]></title>
+      <url>http://yoursite.com/2018/02/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E5%A5%BD%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%8C%BA%E5%9D%97%E9%93%BE/</url>
+      <content type="html"><![CDATA[<ul>
+<li>本周由于杂事很多，没有系统地阅读区块链的书籍，但是大脑并没有少接受有关区块链的概念。</li>
+<li><p>本周阅读了以下几篇文章/讲座：</p>
+<ul>
+<li>Xdite关于2017年Token峰会的解读</li>
+<li>李远16年的采访和17年发布的文章</li>
+<li>一篇有关叶子的文章《比特币唤不醒“斯德哥尔摩症”患者》</li>
+<li>Hifinance关于区块链的系列讲座</li>
+</ul>
+</li>
+<li><p>接下来一个一个来谈。</p>
+</li>
+<li><p>阅读Xdite关于2017年Token summit的解读后，有一个很重要的心得，信息差很重要，所谓币圈一天，人间一年。学习一定不能只看书，书籍从撰写到印刷出版会经历很长时间，基础的内容需要通过读书来系统学习，但是涉及到趋势，领先世界的知识，就不能读书了，有条件的一定要直接去参加国内外的区块链峰会，现场听，例如Token summit和finTech Week，然后整理笔记分享给别人，加深印象。其次的话就是要多读牛人写的文章，基本上两周后youtube会上传区块链峰会录像。</p>
+</li>
+<li>Xdite分享第二个重点是Token的定义，Token分三种，一种是coins，例如比特币，DASH,Zcash,Monero,ZENcash这种加密货币。第二种是utility tokens,消耗品，手续费，使用权利。第三种Tokenized securities 代币化的证券。这一点xdite文章没有讲很细，个人理解可以理解为股权？后两种的区分至今也不是很清楚，不过感觉很多币是两种兼而有之的，例如Telegram准备发的Gram，既可以当使用权利，也可以做投资品。</li>
+<li>Xdite分享的第三个重点是币的长期价值，包括消耗导致价值上升，承载价值，被拿来作为筹码和交易媒介。大众期待的价值，包括公司发行的Token可能会合作，拉盘。社群币共识越来越强，项目改善，出现分叉等等。</li>
+<li><p>Xdite分享的第四个重点是区块链要解决的领域一定要是能提高效率的，而且至少是提高10倍效率的地方。不然去中心化在很多场合并不如中心化效率高。区块链企业更需要解决问题本质的能力，解决刚需的能力。<br>推荐阅读，<a href="https://www.jianshu.com/p/079dc4035498?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo" target="_blank" rel="external">Token Summit 2017 直播笔记</a></p>
+</li>
+<li><p>SelfSell创始人李远16年的采访和17年发布的文章</p>
+</li>
+<li>李远的公司信和云最初是做区块链底层技术的，获得16年区块链技术创新应用大赛创新应用类一等奖。17年创立了SelfSell，一个惊人的理念，把人卖了。</li>
+<li>他在16年的采访视频里分享了对于智能合约的理解。智能合约是数据的logic不是smart，合约是靠逻辑执行的，不是纸质合同的电子化。<br>推荐阅读：<a href="https://v.qq.com/x/page/v05132jj6k9.html" target="_blank" rel="external">区块链风云榜</a></li>
+<li><p>17年的文章中讲了区块链的技术分析，区块链的应用空间和面临的挑战。区块链在相对封闭、存在多方信任问题，以及承载价值传递的场景中，有着独特的技术优势。过于开放的环境很难保证数据上链前的真实性，如果源头是假的，链再不可虚构、不可伪造、不可篡改也没有用。本不需要解决类似拜占庭将军问题的领域就无需区块链技术，因为区块链技术纯技术角度会增加计算，只是和社会成本比，九牛一毛罢了。区块链解决价值传递问题简直就是良药，比特币很好地证实了这一点。<br>推荐阅读：<a href="http://www.caijingmobile.com/detail/331639.php?from=singlemessage" target="_blank" rel="external">区块链技术应用的机遇与挑战</a></p>
+</li>
+<li><p>一篇有关叶子的文章《比特币唤不醒“斯德哥尔摩症”患者》</p>
+</li>
+<li><p>这篇文章堪称一绝，是讲解比特币最佳的类比故事。由这篇文章引出了很多东西，例如包括货币史，包括奥地利经济学派对于货币的看法。所以下周我会开始读米塞斯《人的行为》这本巨著。这本书买了很久，却一直没有打开。这篇文章给我又打了一针动力剂。<br>推荐阅读：<a href="http://www.8btc.com/bitcoin-stockholm-syndrome?from=groupmessage&amp;isappinstalled=0" target="_blank" rel="external">比特币唤不醒“斯德哥尔摩症”患者</a></p>
+</li>
+<li><p>Hi-finance总结的围绕数据，技术侧重解决的不同问题。深表认同！</p>
+<ul>
+<li>AI 产生数据</li>
+<li>Cloud 存储数据</li>
+<li>Big Data 庞大的数据组织</li>
+<li>Blockchain 数据所有权的确认和流转</li>
+</ul>
+</li>
+<li><p>我把Hi-finance关于区块链的讲座资料上传到了google drive，有兴趣的可以下载查看。<br><a href="https://drive.google.com/drive/folders/19eDOvjxQy9X5TyxSbVxspmichRx83hOq?usp=sharing" target="_blank" rel="external">GoogleDrive</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[持续学习链，安心守住币，相信确权的力量]]></title>
       <url>http://yoursite.com/2018/01/28/%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E9%93%BE%EF%BC%8C%E5%AE%89%E5%BF%83%E5%AE%88%E4%BD%8F%E5%B8%81%EF%BC%8C%E7%9B%B8%E4%BF%A1%E7%A1%AE%E6%9D%83%E7%9A%84%E5%8A%9B%E9%87%8F/</url>
       <content type="html"><![CDATA[<ul>
